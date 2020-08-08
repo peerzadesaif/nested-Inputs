@@ -57,9 +57,7 @@
         increaseChild(id);
     }
 
-
-
-    function increaseInput() {
+    const increaseInput = function () {
         $('#form').append(`
             <div id='div${parentComponentCount}'>
             <input placeholder="Parent Component: Enter Something Here" type='text' class='form-control parentForm' id='parentInput-${parentComponentCount}'>&nbsp; 
@@ -68,7 +66,7 @@
             <div id='child-${parentComponentCount}'></div><br><br></div>`);
     }
 
-    function increaseChild(id) {
+    const increaseChild = function (id) {
         $('#child-' + id).append(` 
         <div id='${parentComponentCount}-childMainDiv-${childComponentCount}'>
         <input placeholder="Child Component: Enter Something Here" type='text' class='form-control childForm' id='${parentComponentCount}-childInput-${childComponentCount}'> 
@@ -76,7 +74,7 @@
         </div>`)
     }
 
-    function removeChildValue(parentId, childId) {
+    const removeChildValue = function (parentId, childId) {
         $('#' + parentId + '-childMainDiv-' + childId).remove()
     }
 </script>
