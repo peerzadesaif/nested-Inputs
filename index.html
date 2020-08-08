@@ -61,7 +61,7 @@
     function increaseInput() {
         $('#form').append(`
             <div id='div${parentComponentCount}'>
-            <input type='text' class='form-control parentForm' id='parentInput-${parentComponentCount}'>&nbsp; 
+            <input placeholder="Parent Component: Enter Something Here" type='text' class='form-control parentForm' id='parentInput-${parentComponentCount}'>&nbsp; 
             <span class="glyphicon glyphicon-minus removeParentComponent" onclick=removeParentComponent(${parentComponentCount}) id='parentRemove-${parentComponentCount}'></span>&nbsp;&nbsp;&nbsp; 
             <span class="glyphicon glyphicon-plus" onclick=addChildComponent(${parentComponentCount}) id='parentAdd-${parentComponentCount}'></span><br/><br/>
             <div id='child-${parentComponentCount}'></div><br><br></div>`);
@@ -70,7 +70,7 @@
     function increaseChild(id) {
         $('#child-' + id).append(` 
         <div id='${parentComponentCount}-childMainDiv-${childComponentCount}'>
-        <input type='text' class='form-control childForm' id='${parentComponentCount}-childInput-${childComponentCount}'> 
+        <input placeholder="Child Component: Enter Something Here" type='text' class='form-control childForm' id='${parentComponentCount}-childInput-${childComponentCount}'> 
         <span class="glyphicon glyphicon-minus removeParentComponent" onclick=removeChildValue(${parentComponentCount},${childComponentCount}) id='${parentComponentCount}-span-${childComponentCount}'></span>&nbsp;&nbsp;&nbsp;<br/>
         </div>`)
     }
