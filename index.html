@@ -28,7 +28,8 @@
 <body>
     <div class="container">
         <div class="row">
-            <button id="onClickParentBtn" class="btn btn-lg btn-success">Add</button> <br> <br> <br>
+            <button id="onClickParentBtn" class="btn btn-lg btn-success">Add New Parent Component</button> <br> <br>
+            <br>
             <form id="form" action="">
             </form>
         </div>
@@ -47,11 +48,11 @@
         increaseInput();
     })
 
-    function removeParentComponent(id) {
+    const removeParentComponent = function (id) {
         $(`#div${id}`).remove()
     }
 
-    function addChildComponent(id) {
+    const addChildComponent = function (id) {
         childComponentCount++;
         increaseChild(id);
     }
